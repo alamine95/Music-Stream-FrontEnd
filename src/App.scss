@@ -3,6 +3,7 @@ $greyLight: #131313;
 $greyLighter: #282828;
 $greyText: #b3b3b3;
 $greyNav: #090909;
+$greenMain: #1db954;
 
 @font-face {
   font-family: circular-book;
@@ -30,14 +31,14 @@ body {
 }
 
 .navBar {
-  width: 228px;
-  height: calc(100% - 10px);
+  width: 260px;
+  height: 100%;
   background: $greyDark;
   padding: 10px 10px 0;
   display: flex;
   flex-direction: column;
   .logo {
-    padding: 1.5rem 0.8rem;
+    padding: 1rem 0.8rem;
     svg {
       max-width: 130px;
       path {
@@ -52,10 +53,17 @@ body {
       color: $greyText;
       list-style-type: none;
       border-radius: 5px;
-      padding: 0.8rem;
+      padding: 0.5rem 0.8rem;
       font-size: 0.9rem;
       cursor: pointer;
       transition: all 0.3s ease-in-out;
+      font-family: circular-bold;
+      display: flex;
+      align-items: center;
+      svg {
+        fill: currentColor;
+        margin-right: 15px;
+      }
       &.active {
         background: $greyLighter;
       }
@@ -121,8 +129,14 @@ body {
     border-radius: 10px;
     width: 160px;
     overflow: hidden;
-    padding: 1.2rem;
+    padding: 1.2rem 1.2rem 0.8rem;
     box-shadow: 0 10px 30px 0 rgba(0,0,0,.3), 0 1px 2px 0 rgba(0,0,0,.2);
+    position: relative;
+    &:hover {
+      .playIcon {
+        opacity: 1;
+      }
+    }
     .cardImage {
       height: 160px;
       box-shadow: 0 10px 30px 0 rgba(0,0,0,.3), 0 1px 2px 0 rgba(0,0,0,.2);
@@ -137,7 +151,23 @@ body {
       h3 {
         font-weight: 600;
         font-size: 0.9rem;
+        margin-bottom: 0;
+        letter-spacing: 0.6px;
       }
     }
+  }
+}
+
+.playIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  background: $greenMain;
+  margin-left: auto;
+  opacity: 0;
+  svg {
+    margin: auto;
   }
 }

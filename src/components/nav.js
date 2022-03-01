@@ -1,4 +1,7 @@
 import React from 'react';
+import {ReactComponent as Homeicon} from '../svgs/home.svg'
+import {ReactComponent as Searchicon} from '../svgs/search.svg'
+import {ReactComponent as Libraryicon} from '../svgs/library.svg'
 
 const Nav = () => {
     return (
@@ -25,12 +28,21 @@ const Nav = () => {
                 3c-1 0-2 1-2 2v113c0 1 1 2 2 2h26c1 0 1-1 1-2V134c0-1 0-2-1-2h-26zm-6-33c0 10 9 19 19 19s18-9 18-19-8-18-18-18-19
                 8-19 18zm245 69c10 0 19-8 19-18s-9-18-19-18-18 8-18 18 8 18 18 18zm0-34c9 0 17 7 17 16s-8 16-17 16-16-7-16-16
                 7-16 16-16zm4 18c3-1 5-3 5-6 0-4-4-6-8-6h-8v19h4v-6h4l4 6h5zm-3-9c2 0 4 1 4 3s-2 3-4 3h-4v-6h4z"
-           ></path>*/}</svg> 
+           ></path>*/} </svg> 
           </div>
           <ul>
-            <li className="active">Home</li>
-            <li>Search</li>
-            <li>Your Library</li>
+            <li className="active"> 
+              <Homeicon/> 
+              Home
+            </li>
+            <li>
+              <Searchicon/> 
+              Search
+            </li>
+            <li>
+              <Libraryicon/> 
+              Your Library
+            </li>
           </ul>
           <div className="cookies">
               <span>Cookies</span>

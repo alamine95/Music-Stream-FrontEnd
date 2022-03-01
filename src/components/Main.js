@@ -1,4 +1,5 @@
 import React from 'react';
+import {ReactComponent as PlayIcon} from '../svgs/play.svg'
 
 const Main = () => {
     return (
@@ -16,6 +17,9 @@ const Main = () => {
                         <div className="cardContent">
                             <h3>Liked Songs</h3>
                         </div>
+                        <span className="playIcon">
+                            <PlayIcon/>
+                        </span>
                     </div>
                 </div>
             </div>
